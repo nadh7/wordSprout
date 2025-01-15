@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WordSprout - Contact</title>
+    <link rel="icon" href="img/wordsprout-icon.webp" type="image/png">
+
+    <!-- Apple touch icon -->
+    <link rel="apple-touch-icon" href="img/wordsprout-icon.webp">
+
+    <!-- For high resolution displays (e.g., Retina) -->
+    <link rel="icon" sizes="192x192" href="img/wordsprout-icon.webp">
+    <link rel="stylesheet" href="contactus.css">
+</head>
+
+<body style="background: url('img/hero-bg.webp') no-repeat center center/cover;">
+    <!-- Header Section -->
+    <header>
+        <h1>WORDSPROUT</h1>
+        <nav>
+            <a href="homepage.html">HOME</a>
+            <a href="dictionary.html">DICTIONARY</a>
+            <a href="quickTranslate.html">QUICK TRANSLATE</a>
+            <a href="learning.html">LEARNING</a>
+            <a href="contactus.html" class="active">CONTACT</a>
+        </nav>
+    </header>
+    <!-- Contact Us Section -->
+    <section id="contactus" class="section">
+        <h2>Contact Us</h2>
+        <div class="profile-card">
+            <div class="contact-form">
+                <form id="contactForm" action="submit_form.php" method="post">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="abc123@gmail.com" required>
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Any questions?" required></textarea>
+
+                    <button type="submit">Send!🚀</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQs Section -->
+    <section id="faqs" class="section">
+        <h2>FAQs</h2>
+        <div class="collapsible-container">
+            <button class="collapsible">What is WordSprout?</button>
+            <div class="content">
+                <p>WordSprout is an online language learning platform offering resources and interactive tools to help
+                    you learn English, Malay, Mandarin, and more. Whether you're a beginner or looking to improve your
+                    skills, WordSprout has something for you!</p>
+            </div>
+            <button class="collapsible">How do I start learning a language?</button>
+            <div class="content">
+                <p>To begin learning a language, simply select the language of your choice from the homepage and start
+                    exploring the learning modules, quizzes, and interactive exercises available.</p>
+            </div>
+            <button class="collapsible">Can I switch languages during my learning process?</button>
+            <div class="content">
+                <p>Yes! You can easily switch between languages at any time by navigating back to the learning page,
+                    where you'll find the option to choose a different language.</p>
+            </div>
+            <button class="collapsible">Are the lessons free?</button>
+            <div class="content">
+                <p>Entirely! We strive to provide quality and cost free education as we believe that everyone should and
+                    deserve to learn.</p>
+            </div>
+            <button class="collapsible">How can I contact customer support?</button>
+            <div class="content">
+                <p>You can reach out to our customer support team by visiting the "Contact" page and filling out the
+                    contact form. We will get back to you as soon as possible.</p>
+            </div>
+            <button class="collapsible">Can I use WordSprout on mobile devices?</button>
+            <div class="content">
+                <p>Yes, WordSprout is fully optimized for mobile devices. You can access the platform on your smartphone
+                    or tablet through a web browser for a seamless learning experience on the go.</p>
+            </div>
+        </div>
+    </section>
+    <!-- Footer Section -->
+    <footer>
+        <p>@wordsprout_official</p>
+    </footer>
+
+    <script src="contactus.js"></script>
+</body>
+
+</html>

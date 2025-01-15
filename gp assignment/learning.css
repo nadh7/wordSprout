@@ -1,0 +1,204 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Header Section */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 3px solid goldenrod;
+    background-color: #a8e063;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+nav {
+    display: flex;
+    gap: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: transform 0.2s ease-in-out;
+}
+
+nav a.active {
+    color: goldenrod;
+}
+
+nav a:hover {
+    color: #6cbe45;
+    transform: scale(1.1);
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 15px;
+    }
+
+    nav a {
+        font-size: 18px;
+        /*Resize font for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 20px;
+        /*Resize header text for mobile screens */
+    }
+
+    nav a {
+        font-size: 16px;
+        /* Resize font for mobile screens */
+    }
+}
+
+/* Main Section Styling */
+main {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+/* Section Card Styling */
+.section-card {
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: space-between; /* Space between image and text */
+    background-color: #0d351a; 
+    border-radius: 10px;
+    padding: 20px;
+    color: blanchedalmond;
+    width: 80%; /* Consistent width */
+    height: 200px; /* Consistent height */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Hover Effect */
+.section-card:hover {
+    transform: scale(1.02); 
+}
+
+/* Placeholder Styling */
+.section-card .image-placeholder {
+    flex-shrink: 0; 
+    width: 150px;
+    height: 150px;
+    background-color: #ece5e5; 
+    border-radius: 8px;
+}
+
+.image-placeholder{
+    flex-shrink: 0;
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.image-placeholder img {
+    width: 100%; /* Gambar memenuhi sepenuhnya lebar placeholder */
+    height: 100%; /* Gambar memenuhi sepenuhnya ketinggian placeholder */
+    object-fit: cover; /* Pastikan gambar tidak terdistorsi */
+    border-radius: 8px; /* Sama seperti border-radius untuk placeholder */
+}
+
+/* Text Section Styling */
+.section-card .section-text {
+    flex: 1;
+    text-align: center; /* Center text vertically */
+    padding: 0 20px; /* Padding for spacing */
+}
+
+.section-card .section-text h2 {
+    font-size: 1.8em;
+    margin: 0;
+}
+
+.section-card .section-text p {
+    font-size: 1em;
+    color: #c4b454;
+    margin-top: 5px;
+}
+
+/* Link Styling */
+.section-link {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.learning-section{
+    text-align: center;
+}
+
+.back-btn {
+    display: block;  /* Makes the button a block-level element */
+    margin: 20px auto;  /* Horizontally centers the button */
+    padding: 10px 20px;
+    background-color: #8BC34A;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+
+.back-btn:hover {
+    background-color: #689F38;
+}
+
+/* Footer */
+footer {
+    text-align: left;
+    padding: 10px;
+    margin-top: 40px;
+    /*border-top: 1px solid #ccc;*/
+    border-top: 1px solid goldenrod;
+    background-color: #a8e063;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .section-card {
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+    }
+
+    .section-card .image-placeholder {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 10px;
+    }
+}

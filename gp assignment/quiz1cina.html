@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WordSprout Learning - Mandarin</title>
+    <link rel="icon" href="img/wordsprout-icon.webp" type="image/png">
+    
+    <!-- Apple touch icon -->
+    <link rel="apple-touch-icon" href="img/wordsprout-icon.webp">
+    
+    <!-- For high resolution displays (e.g., Retina) -->
+    <link rel="icon" sizes="192x192" href="img/wordsprout-icon.webp">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>WORDSPROUT</h1>
+        <nav>
+            <a href="homepage.html">HOME</a>
+            <a href="dictionary.html">DICTIONARY</a>
+            <a href="quickTranslate.html">QUICK TRANSLATE</a>
+            <a href="learning.html" class="active">LEARNING</a>
+            <a href="contactus.html">CONTACT</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="quiz-section">
+            <h1>阅读并回答 (Yuèdú bìng huídá)</h1>
+            <div class="progress-container">
+                <div class="progress-bar"></div>
+            </div>
+
+            <!-- Quiz 3 (Chinese Quiz) -->
+            <div class="quiz-content" id="quiz3">
+                <img src="img/nomborcina2.jpeg" alt="Quiz image" class="quiz-image">
+                <p class="quiz-question">我有 (wǒ yǒu) _____ 桃核 (táo hé).</p>
+                <div class="quiz-options">
+                    <button onclick="checkAnswer(this, '四 (sì)')">四 (sì)</button>
+                    <button onclick="checkAnswer(this, '六 (liù)')">六 (liù)</button>
+                    <button onclick="checkAnswer(this, '八 (bā)')">八 (bā)</button>
+                </div>
+            </div>
+
+            <!-- Quiz 4 (Another Chinese Quiz) -->
+            <div class="quiz-content" id="quiz4" style="display:none;">
+                <img src="img/nomborcina1.jpeg" alt="Quiz image" class="quiz-image">
+                <p class="quiz-question">这是数字(zhè shì shù zì) _____ .</p>
+                <div class="quiz-options">
+                    <button onclick="checkAnswer(this, '一 (yī)')">一 (yī)</button>
+                    <button onclick="checkAnswer(this, '五 (wǔ)')">五 (wǔ)</button>
+                    <button onclick="checkAnswer(this, '六 (liù)')">六 (liù)</button>
+                    <button onclick="checkAnswer(this, '三 (sān)')">三 (sān)</button>
+                    <button onclick="checkAnswer(this, '九 (jiǔ)')">九 (jiǔ)</button>
+                </div>
+                <p id="score-display">你的分数 (Nǐ de fēnshù): 0</p>
+            </div>
+
+            <!-- Navigation -->
+            <div class="navigation">
+                <button class="quiz-button next-quiz" onclick="nextQuiz()">下一个问题 (Xià yīgè wèntí)</button>
+                <button class="quiz-button submit-quiz" onclick="submitQuiz()" style="display:none;">提交 (Tíjiāo)</button>
+                <br>
+                <a href="nomborChina.html"><button id="back-button" class="back-btn">🔙 返回第 1 节 (Fǎnhuí dì 1 jié)</button></a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>@wordsprout_official</p>
+    </footer>
+
+    <script>
+        let currentQuiz = 3; 
+        let score = 0;
+
+        // Function to check answer
+        function checkAnswer(button, correctAnswer) {
+            if (button.textContent === correctAnswer) {
+                alert("Correct!");
+                score++;
+            } else {
+                alert("Wrong answer!");
+            }
+            button.style.backgroundColor = (button.textContent === correctAnswer) ? "green" : "red";
+        }
+
+        // Function to move to next quiz
+        function nextQuiz() {
+            if (currentQuiz === 3) {
+                document.getElementById('quiz3').style.display = 'none';
+                document.getElementById('quiz4').style.display = 'block';
+                currentQuiz++;
+                document.querySelector('.next-quiz').style.display = 'none'; // Hide Next Question button
+                document.querySelector('.submit-quiz').style.display = 'block'; // Show Submit button at the last quiz
+            }
+        }
+
+        // Function to submit quiz and show score
+        function submitQuiz() {
+            alert(`Your final score is: ${score}`);
+            document.getElementById('score-display').textContent = `Final Score: ${score}`;
+        }
+    </script>
+</body>
+</html>

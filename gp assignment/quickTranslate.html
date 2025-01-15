@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WordSprout - Quick Translate</title>
+    <link rel="icon" href="img/wordsprout-icon.webp" type="image/png">
+    
+    <!-- Apple touch icon -->
+    <link rel="apple-touch-icon" href="img/wordsprout-icon.webp">
+    
+    <!-- For high resolution displays (e.g., Retina) -->
+    <link rel="icon" sizes="192x192" href="img/wordsprout-icon.webp">
+    <link rel="stylesheet" href="quickTranslation.css">
+    <script src="Quick Translation.js" defer></script>
+</head>
+
+<body style="background: url('img/hero-bg.webp') no-repeat center center/cover;">
+    <!-- Header Section -->
+    <header>
+        <h1>WORDSPROUT</h1>
+        <nav>
+            <a href="homepage.html">HOME</a>
+            <a href="dictionary.html">DICTIONARY</a>
+            <a href="quickTranslate.html" class="active">QUICK TRANSLATE</a>
+            <a href="learning.html">LEARNING</a>
+            <a href="contactus.html">CONTACT</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="quickTranslate" class="section">
+            <h2>🌟 WELCOME TO THE WORDSPROUT QUICK TRANSLATE! 📚</h2>
+            <p class="intro"> Hello, little explorers! 👋 Welcome to the <strong>WordSprout Quick Translate</strong>, 
+                your ultimate companion for instant translations. Dive into the world of words and meanings as we bring languages to life in 
+                <strong>English</strong>, <strong>Malay</strong>, and <strong>Mandarin</strong>. 
+                Ready to grow your language skills? Enter your text, hit "Translate," and let the adventure begin!
+            </p>
+            <div class="center-wrapper">
+                <div class="container">
+                    <div class="wrapper">
+                        <div class="text-input">
+                            <textarea spellcheck="false" class="from-text" placeholder="Enter text"></textarea>
+                            <ul class="controls">
+                                <li class="row from">
+                                    <div class="icons">
+                                        <ion-icon id="from" name="volume-medium-outline"></ion-icon>
+                                        <ion-icon id="from" name="copy-outline"></ion-icon>
+                                    </div>
+                                    <select></select>
+                                </li>
+                                <li class="exchange">
+                                    <ion-icon name="swap-vertical"></ion-icon>
+                                </li>
+                                <li class="row to">
+                                    <select></select>
+                                    <div class="icons">
+                                        <ion-icon id="to" name="volume-medium-outline"></ion-icon>
+                                        <ion-icon id="to" name="copy-outline"></ion-icon>
+                                    </div>
+                                </li>
+                            </ul>
+                            <textarea spellcheck="false" readonly disabled class="to-text" placeholder="Translation"></textarea>
+                        </div>
+                    </div>
+                    <button>Translate</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>@wordsprout_official</p>
+    </footer>
+</body>
+
+</html>

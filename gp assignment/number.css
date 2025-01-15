@@ -1,0 +1,207 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Header Section */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 3px solid goldenrod;
+    background-color: #a8e063;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+nav {
+    display: flex;
+    gap: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: transform 0.2s ease-in-out;
+}
+
+nav a.active {
+    color: goldenrod;
+}
+
+nav a:hover {
+    color: #6cbe45;
+    transform: scale(1.1);
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 15px;
+    }
+
+    nav a {
+        font-size: 18px;
+        /*Resize font for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 20px;
+        /*Resize header text for mobile screens */
+    }
+
+    nav a {
+        font-size: 16px;
+        /* Resize font for mobile screens */
+    }
+}
+
+main {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    
+}
+
+.section-number h1 {
+    text-align: left;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.divider span {
+    flex: 1;
+    height: 1px;
+    background-color: black;
+}
+
+.divider h2 {
+    margin: 0 10px;
+    font-size: 1.2rem;
+    font-weight: normal;
+    text-transform: uppercase;
+    text-align: center;
+    
+}
+
+.number-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tetapkan 3 kolum */
+    gap: 20px;
+    justify-content: center; /* Untuk memastikan semua elemen selaras ke tengah */
+    
+}
+
+.number-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #c4c4c4;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+}
+
+.number-card .number {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    
+}
+
+.number-card .word {
+    font-size: 1rem;
+    text-transform: uppercase;
+    
+}
+
+/* Quiz Button Styling */
+.quiz-button {
+    display: inline-block;
+    padding: 12px 24px;
+    margin-top: 20px;
+    background:#808000;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.quiz-button:hover {
+    background: #ffc107;
+    transform: scale(1.1);
+}
+
+.back-btn {
+    margin: 20px auto;  /* Horizontally centers the button */
+    padding: 12px 24px;
+    background-color: #8BC34A;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+
+.back-btn:hover {
+    background-color: #689F38;
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    text-align: left;
+    padding: 10px;
+    margin-top: 40px;
+    /*border-top: 1px solid #ccc;*/
+    border-top: 1px solid goldenrod;
+    background-color: #a8e063;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .quiz-button {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+}

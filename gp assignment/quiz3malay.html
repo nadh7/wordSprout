@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WordSprout Learning - Malay</title>
+    <link rel="icon" href="img/wordsprout-icon.webp" type="image/png">
+    
+    <!-- Apple touch icon -->
+    <link rel="apple-touch-icon" href="img/wordsprout-icon.webp">
+    
+    <!-- For high resolution displays (e.g., Retina) -->
+    <link rel="icon" sizes="192x192" href="img/wordsprout-icon.webp">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>WORDSPROUT</h1>
+        <nav>
+            <a href="homepage.html">HOME</a>
+            <a href="dictionary.html">DICTIONARY</a>
+            <a href="quickTranslate.html">QUICK TRANSLATE</a>
+            <a href="learning.html" class="active">LEARNING</a>
+            <a href="contactus.html">CONTACT</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="quiz-section">
+            <h1>Baca dan Jawab</h1>
+            <div class="progress-container">
+                <div class="progress-bar"></div>
+            </div>
+
+            <!-- Quiz 1 -->
+            <div class="quiz-content" id="quiz1">
+                <img src="img/cuaca3.jpeg" alt="Quiz image" class="quiz-image">
+                <p class="quiz-question">Apakah cuaca ini ?</p>
+                <div class="quiz-options">
+                    <button onclick="checkAnswer(this)">Cerah</button>
+                    <button onclick="checkAnswer(this, 'Bersalji')">Bersalji</button>
+                    <button onclick="checkAnswer(this)">Mendung</button>
+                </div>
+            </div>
+
+            <!-- Quiz 2 -->
+            <div class="quiz-content" id="quiz2" style="display:none;">
+                <img src="img/cuaca4.jpg" alt="Quiz image" class="quiz-image">
+                <p>Saya suka apabila cuaca _____ .</p>
+                <div class="answers">
+                    <div class="answer" onclick="checkAnswer(this, 'Cerah')" data-correct="true">Cerah</div>
+                    <div class="answer" onclick="checkAnswer(this)" data-correct="false">Bersalji</div>
+                    <div class="answer" onclick="checkAnswer(this)" data-correct="false">Mendung</div>
+                    <div class="answer" onclick="checkAnswer(this)" data-correct="false">Musim Luruh</div>
+                    <div class="answer" onclick="checkAnswer(this)" data-correct="false">Hujan</div>
+                </div>
+                <p id="score-display">Skor anda: 0</p>
+            </div>
+
+            <!-- Navigation -->
+            <div class="navigation">
+                <button class="quiz-button next-quiz" onclick="nextQuiz()">Soalan Seterusnya</button>
+                <button class="quiz-button submit-quiz" onclick="submitQuiz()" style="display:none;">Hantar</button>
+                <br>
+                <a href="cuaca.html"><button id="back-button" class="back-btn">🔙 Kembali</button></a>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>@wordsprout_official</p>
+    </footer>
+
+    <script>
+        let currentQuiz = 1;
+        let score = 0;
+
+        // Function to check answer
+        function checkAnswer(button, correctAnswer) {
+            if (button.textContent === correctAnswer) {
+                alert("Betul! (Correct!)");
+                score++;
+            } else {
+                alert("Salah! (Wrong!)");
+            }
+            button.style.backgroundColor = (button.textContent === correctAnswer) ? "green" : "red";
+        }
+
+        // Function to move to next quiz
+        function nextQuiz() {
+            if (currentQuiz === 1) {
+                document.getElementById('quiz1').style.display = 'none';
+                document.getElementById('quiz2').style.display = 'block';
+                currentQuiz++;
+                document.querySelector('.next-quiz').style.display = 'none'; // Hide Next Question button
+                document.querySelector('.submit-quiz').style.display = 'block'; // Show Submit button at the last quiz
+            }
+        }
+
+        // Function to submit quiz and show score
+        function submitQuiz() {
+            alert(`Skor akhir anda ialah: ${score} (Your final score is: ${score})`);
+            document.getElementById('score-display').textContent = `Skor akhir: ${score} (Final score: ${score})`;
+        }
+    </script>
+</body>
+</html>
